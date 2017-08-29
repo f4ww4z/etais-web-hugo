@@ -1,5 +1,6 @@
-baseURL: https://etais-ee.github.io/etais-web
+baseURL: https://f4ww4z.github.io/hugo-etais_web
 disablePathToLower: true
 languageCode: en-us
 title: ETAIS
+theme: hugo-redlounge
 ...

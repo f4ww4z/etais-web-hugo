@@ -3,7 +3,7 @@ layout: landing
 permalink: /self_service/
 title: "ETAIS Self-Service Guide"
 ---
-{% include toc.html %}
+{{% tor /%}}
 
 ## Overview
 ETAIS self-service portal is a single entry point for provisioning and managing computational and storage resources
@@ -19,7 +19,7 @@ The main concepts are as follows:
 
 ![Overview](../images/etais-structure.png)
 
-* **Organization** is a standalone entity that represents a research group or a company. Organization is responsible for the 
+* **Organization** is a standalone entity that represents a research group or a company. Organization is responsible for the
 actions of users connected to it in different [roles](#roles).
 * **Project** is an entity within an organization that aggregates and isolates teams and resources.
 * **Provider** is an entity that represents account in an external service provider.
@@ -62,7 +62,7 @@ Self-Service Portal is available from: [https://minu.etais.ee](https://minu.etai
 > *NB! Users need to accept Terms of Service presented on the first login for account activation!*
 
 ## Workspaces
-ETAIS self-service is built around the concept of workspaces. Workspace defines structural context for the 
+ETAIS self-service is built around the concept of workspaces. Workspace defines structural context for the
 user. Each workspace type shows information and possible actions relevant to the user in a certain role.
 There are several workspace types available in the system:
 
@@ -141,7 +141,7 @@ Menu entries available within organization workspace:
 * **Dashboard**: overview of managed resources and projects
 * **Providers**: resource providers management (system and provisioned providers)
 * **Projects**: projects management
-* **Service store**: catalog of resources and providers, available for provisioning 
+* **Service store**: catalog of resources and providers, available for provisioning
 * **Analytics**: resource usage reports
 * **Audit logs**: event logs related to organization, its projects and resources
 * **Team**: management of organization members and their project/role accreditations
@@ -149,7 +149,7 @@ Menu entries available within organization workspace:
 * **Manage**: management of organization details
 
 ### Adding a project
-Projects can be added by selecting "Projects" from the menu and clicking on "Add project" button. 
+Projects can be added by selecting "Projects" from the menu and clicking on "Add project" button.
 
 ![Adding a project](../images/project-add.png)
 
@@ -218,7 +218,7 @@ We also strongly suggest to fill also VPC description field. Other input fields 
 ## Adding a VM
 > *Projects need to have at least one VPC resource package enabled, before any virtual machines can be created!*
 
-VMs can be added by selecting "Resources: Virtual machines" from the menu and clicking on "Add virtual machine" button. 
+VMs can be added by selecting "Resources: Virtual machines" from the menu and clicking on "Add virtual machine" button.
 
 ![Adding a VM](../images/project-vm-add.png)
 
@@ -240,7 +240,7 @@ Flavor will set initial resource profile for a VM - how much RAM, CPU cores and 
 
 ![Adding a VM - step 4](../images/project-vm-add-form-step4.png)
 
-Selecting VM flavor will also update "System volume size" with the option to override it manually (to higher custom value). Data volume is always provisioned with a VM and its size can be customized and incremented in 1GB steps. 
+Selecting VM flavor will also update "System volume size" with the option to override it manually (to higher custom value). Data volume is always provisioned with a VM and its size can be customized and incremented in 1GB steps.
 
 By default provisioned virtual machines expect users to login using SSH keys. Initial SSH key for a login should be selected by clicking on "SSH public key: Show choices" selector.
 
@@ -254,11 +254,11 @@ By default provisioned virtual machines expect users to login using SSH keys. In
 
 By default no incoming connections will be allowed for a VM. Predefined Security Groups that contain firewall rules must be linked to a VM in order to open up access (like ssh, http, etc).
 
-> *NB! VM create form will automatically include "default" security group which enables egress (ie outgoing) traffic for a VM and which is required in order to reply to any of the incoming packets!* 
+> *NB! VM create form will automatically include "default" security group which enables egress (ie outgoing) traffic for a VM and which is required in order to reply to any of the incoming packets!*
 
 ![Adding a VM - step 7](../images/project-vm-add-form-step7.png)
 
-VM needs to be connected to at least one of the VPC (internal) networks and also to external network via floating IP - if extenal/public access to VM is required. 
+VM needs to be connected to at least one of the VPC (internal) networks and also to external network via floating IP - if extenal/public access to VM is required.
 
 > *Floating IP is technically realized as 1:1 NAT between VM internal ip and public network ip.*
 
@@ -270,7 +270,7 @@ We strongly suggest to add also VM description. In order to provision the VM ple
 
 ![Adding a VM - step 9](../images/project-vm-add-form-step9.png)
 
-VM should reach into "Active" status when successfully provisioned. "Access" field will show IP address to access VM over SSH (Linux) or over RDP (Windows). 
+VM should reach into "Active" status when successfully provisioned. "Access" field will show IP address to access VM over SSH (Linux) or over RDP (Windows).
 
 > *VM access over SSH or RDP should be permitted by Security Groups linked to VM!*
 
