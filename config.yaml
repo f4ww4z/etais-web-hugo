@@ -1,0 +1,5 @@
+baseURL: https://etais-ee.github.io/etais-web
+disablePathToLower: true
+languageCode: en-us
+title: ETAIS
+...
